@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cronograma de Marketing — System Engenharia (Set–Dez/2025)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="bg-white text-zinc-900">
+  <main class="max-w-7xl mx-auto p-6 space-y-8">
+    <!-- Cabeçalho com logo -->
+    <header class="text-center space-y-4">
+      <!-- OBS: mantenha o arquivo com o MESMO nome no repositório ou renomeie para logo-system.png e atualize o src abaixo -->
+      <img src="./Logo%20System%20-%20Nova.png" alt="Logo System Engenharia" class="h-24 mx-auto" onerror="this.src=''; this.outerHTML='<div class=\'text-sm text-zinc-500\'>[Logo não encontrada: coloque o arquivo na raiz do repo e mantenha o nome.]</div>'" />
+      <h1 class="text-3xl font-bold">Cronograma de Marketing — Semanas (Set–Dez/2025)</h1>
+      <p class="text-zinc-600">Setembro com apenas Semana 4 • Demais meses completos</p>
+    </header>
+
+    <!-- Navegação de meses -->
+    <nav id="nav-meses" class="flex flex-wrap items-center justify-center gap-2"></nav>
+
+    <!-- Bloco do mês ativo -->
+    <section id="mes-ativo" class="border rounded-2xl p-5 shadow-sm bg-zinc-50"></section>
+
+    <footer class="text-center text-xs text-zinc-500 py-6">
+      © <span id="ano"></span> System Engenharia • Cronograma (Set–Dez/2025)
+    </footer>
+  </main>
+
+  <script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // ========================= DADOS =========================
+  const CRONOGRAMA = [
+    // ---------- SETEMBRO: apenas Semana 4 ----------
+    {
+      rotulo: 'Setembro/2025 — Setembro Amarelo 💛',
+      datasImportantes: [
+        '23/09 – Técnico em Edificações (Stories)',
+        '27/09 – Bombeiro/Encanador (Feed)'
+      ],
+      semanas: [
+        {
+          nome: 'Semana 4',
+          itens: [
+            { data: '27/09', titulo: 'Dia do Bombeiro/Encanador', canal: 'Feed', status: 'Fácil' },
+            { titulo: 'Obra Safra – atualização final do mês', canal: 'Feed + Stories', status: 'Já em mãos' },
+            { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' },
+            { titulo: 'Reuniões/eventos corporativos (se houver)', canal: 'Feed + Stories', status: 'A captar' }
+          ]
+        }
+      ]
+    },
+
+    // ---------- OUTUBRO (completo) ----------
+    {
+      rotulo: 'Outubro/2025 — Outubro Rosa 🎀',
+      datasImportantes: [
+        '14/10 – Operador de Perfuratriz (Stories)',
+        '17/10 – Dia do Eletricista ⚡ (Feed)',
+        '25/10 – Engenheiro Civil (Feed)'
+      ],
+      semanas: [
+        { nome: 'Semana 1', itens: [
+          { titulo: 'Vagas em aberto (mês)', canal: 'Feed', status: 'A captar' },
+          { titulo: 'Campanha Outubro Rosa — Post mensal', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Dicas do setor (quinzenal)', canal: 'Feed + Stories', status: 'Fácil' }
+        ]},
+        { nome: 'Semana 2', itens: [
+          { data: '14/10', titulo: 'Dia do Operador de Perfuratriz', canal: 'Stories', status: 'Fácil' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' },
+          { titulo: 'Atualização de Obra: Atlântico (etapas)', canal: 'Feed + Stories', status: 'Já em mãos' }
+        ]},
+        { nome: 'Semana 3', itens: [
+          { data: '17/10', titulo: 'Dia do Eletricista ⚡', canal: 'Feed', status: 'Fácil' },
+          { titulo: 'Reconhecimento de equipe (mês)', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Dicas do setor (quinzenal)', canal: 'Feed + Stories', status: 'Fácil' }
+        ]},
+        { nome: 'Semana 4', itens: [
+          { data: '25/10', titulo: 'Dia do Engenheiro Civil', canal: 'Feed', status: 'Fácil' },
+          { titulo: 'Atualização de Obra: Safra (etapas)', canal: 'Feed + Stories', status: 'Já em mãos' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' },
+          { titulo: 'Obra do mês (com fotos)', canal: 'Feed', status: 'Já em mãos' },
+          { titulo: 'Reuniões/eventos corporativos (se houver)', canal: 'Feed + Stories', status: 'A captar' }
+        ]}
+      ]
+    },
+
+    // ---------- NOVEMBRO (completo) ----------
+    {
+      rotulo: 'Novembro/2025 — Novembro Azul 💙',
+      datasImportantes: [
+        '06/11 – Profissional de Projetos (Stories)',
+        '09/11 – Técnico em Eletrotécnica (Stories)',
+        '20/11 – Consciência Negra ✊🏾 (Stories)',
+        '23/11 – Engenheiro Eletricista ⚡ (Feed)',
+        '27/11 – Técnico em Segurança do Trabalho (Stories)',
+        '29/11 – Aniversário da Empresa 🎉 (Feed)'
+      ],
+      semanas: [
+        { nome: 'Semana 1', itens: [
+          { data: '06/11', titulo: 'Dia do Profissional de Projetos', canal: 'Stories', status: 'Fácil' },
+          { titulo: 'Vagas em aberto (mês)', canal: 'Feed', status: 'A captar' },
+          { titulo: 'Campanha Novembro Azul — Post mensal', canal: 'Feed + Stories', status: 'A captar' }
+        ]},
+        { nome: 'Semana 2', itens: [
+          { data: '09/11', titulo: 'Dia do Técnico em Eletrotécnica', canal: 'Stories', status: 'Fácil' },
+          { titulo: 'Dicas do setor (quinzenal)', canal: 'Feed + Stories', status: 'Fácil' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' }
+        ]},
+        { nome: 'Semana 3', itens: [
+          { data: '20/11', titulo: 'Consciência Negra ✊🏾', canal: 'Stories', status: 'Fácil' },
+          { titulo: 'Reconhecimento de equipe (mês)', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Atualização de Obra: Atlântico (etapas)', canal: 'Feed + Stories', status: 'Já em mãos' }
+        ]},
+        { nome: 'Semana 4', itens: [
+          { data: '23/11', titulo: 'Dia do Engenheiro Eletricista ⚡', canal: 'Feed', status: 'Fácil' },
+          { data: '27/11', titulo: 'Dia do Técnico em Segurança do Trabalho', canal: 'Stories', status: 'Fácil' },
+          { data: '29/11', titulo: 'Aniversário da Empresa 🎉', canal: 'Feed', status: 'A captar' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' },
+          { titulo: 'Obra do mês (com fotos)', canal: 'Feed', status: 'Já em mãos' },
+          { titulo: 'Reuniões/eventos corporativos (se houver)', canal: 'Feed + Stories', status: 'A captar' }
+        ]}
+      ]
+    },
+
+    // ---------- DEZEMBRO (completo) ----------
+    {
+      rotulo: 'Dezembro/2025 — Dezembro Vermelho ❤️',
+      datasImportantes: [
+        '25/12 – Natal 🎄 (Feed + Stories)',
+        '31/12 – Ano Novo 🎆 (Feed + Stories)'
+      ],
+      semanas: [
+        { nome: 'Semana 1', itens: [
+          { titulo: 'Vagas em aberto (mês)', canal: 'Feed', status: 'A captar' },
+          { titulo: 'Campanha Dezembro Vermelho — Post mensal', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Dicas do setor (quinzenal)', canal: 'Feed + Stories', status: 'Fácil' }
+        ]},
+        { nome: 'Semana 2', itens: [
+          { titulo: 'Atualização de Obra: Safra (etapas finais)', canal: 'Feed + Stories', status: 'Já em mãos' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' }
+        ]},
+        { nome: 'Semana 3', itens: [
+          { titulo: 'Reconhecimento de equipe (mês)', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Dicas do setor (quinzenal)', canal: 'Feed + Stories', status: 'Fácil' },
+          { titulo: 'Obra do mês (com fotos)', canal: 'Feed', status: 'Já em mãos' }
+        ]},
+        { nome: 'Semana 4', itens: [
+          { data: '25/12', titulo: 'Natal 🎄 (mensagem institucional)', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Retrospectiva do ano — principais entregas', canal: 'Feed', status: 'A captar' },
+          { data: '31/12', titulo: 'Ano Novo 🎆 (mensagem)', canal: 'Feed + Stories', status: 'A captar' },
+          { titulo: 'Reels técnicos (quinzenal)', canal: 'Reels', status: 'Em captação' },
+          { titulo: 'Reuniões/eventos corporativos (se houver)', canal: 'Feed + Stories', status: 'A captar' }
+        ]}
+      ]
+    }
+  ];
+
+  // ========================= RENDER =========================
+  const STATUS_CLASS = {
+    'Pronto': 'bg-green-100 text-green-800',
+    'Já em mãos': 'bg-blue-100 text-blue-800',
+    'Fácil': 'bg-emerald-100 text-emerald-800',
+    'Em captação': 'bg-amber-100 text-amber-800',
+    'A captar': 'bg-red-100 text-red-800'
+  };
+
+  const nav = document.getElementById('nav-meses');
+  const sec = document.getElementById('mes-ativo');
+  let ativo = 0;
+
+  function renderNav(){
+    nav.innerHTML = '';
+    CRONOGRAMA.forEach((m, i) => {
+      const b = document.createElement('button');
+      b.className = `px-3 py-1.5 rounded-full text-sm border ${i===ativo? 'bg-black text-white':'bg-white text-black'}`;
+      b.textContent = m.rotulo;
+      b.onclick = () => { ativo = i; renderMes(); renderNav(); };
+      nav.appendChild(b);
+    });
+  }
+
+  function pill(status){
+    const span = document.createElement('span');
+    span.className = `text-xs px-2 py-1 rounded-full ${STATUS_CLASS[status]||'bg-zinc-100 text-zinc-700'}`;
+    span.textContent = status;
+    return span;
+  }
+
+  function renderMes(){
+    const m = CRONOGRAMA[ativo];
+    sec.innerHTML = '';
+
+    const h2 = document.createElement('h2');
+    h2.className = 'text-xl font-semibold';
+    h2.textContent = m.rotulo;
+    sec.appendChild(h2);
+
+    // Datas importantes
+    const boxDatas = document.createElement('div');
+    boxDatas.className = 'mt-4';
+    boxDatas.innerHTML = '<h3 class="font-medium mb-1">📌 Datas importantes do mês</h3>';
+    const ul = document.createElement('ul');
+    ul.className = 'list-disc list-inside text-zinc-800 text-sm';
+    m.datasImportantes.forEach(d => {
+      const li = document.createElement('li');
+      li.textContent = d; ul.appendChild(li);
+    });
+    boxDatas.appendChild(ul);
+    sec.appendChild(boxDatas);
+
+    // Semanas
+    const grid = document.createElement('div');
+    grid.className = 'grid md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4';
+
+    m.semanas.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'bg-white border rounded-2xl p-4 shadow-sm';
+      const h4 = document.createElement('h4');
+      h4.className = 'font-semibold mb-3';
+      h4.textContent = s.nome; card.appendChild(h4);
+
+      const col = document.createElement('div');
+      col.className = 'space-y-2';
+      s.itens.forEach((p, idx) => {
+        const it = document.createElement('div');
+        it.className = 'border rounded-xl p-3 bg-white shadow-sm flex flex-col gap-1';
+        const top = document.createElement('div');
+        top.className = 'flex items-start justify-between gap-3';
+        const h = document.createElement('h4');
+        h.className = 'font-medium leading-tight';
+        h.textContent = (p.data? (p.data+' ') : '') + p.titulo;
+        const sp = pill(p.status);
+        top.appendChild(h); top.appendChild(sp);
+        const meta = document.createElement('div');
+        meta.className = 'text-xs text-zinc-600';
+        meta.textContent = p.canal;
+        it.appendChild(top); it.appendChild(meta);
+        col.appendChild(it);
+      });
+
+      card.appendChild(col); grid.appendChild(card);
+    });
+
+    sec.appendChild(grid);
+  }
+
+  renderNav();
+  renderMes();
+  </script>
+</body>
+</html>
